@@ -1,14 +1,14 @@
 public class FibonacciCalc {
-  public static int fibRecursion(int count) {
-    if (count == 0) {
+  public static int fibRecursion(int number) {
+    if (number == 0) {
       return 0;
     }
 
-    if (count == 1 || count == 2) {
+    if (number == 1 || number == 2) {
       return 1;
     }
 
-    return fibRecursion(count - 1) + fibRecursion(count - 2);
+    return fibRecursion(number - 1) + fibRecursion(number - 2);
   }
 
   public static void main(String args[]) {
