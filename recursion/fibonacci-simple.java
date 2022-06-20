@@ -1,5 +1,7 @@
 /*
 0 1 1 2 3 5 8 13
+Time complexity: 2^n (Exponential)
+Space complexity: O(n) -> Due to recursive stack
 */
 
 public class FibonacciCalc {
