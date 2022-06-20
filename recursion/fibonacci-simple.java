@@ -1,3 +1,7 @@
+/*
+0 1 1 2 3 5 8 13
+*/
+
 public class FibonacciCalc {
   public static int fibRecursion(int number) {
     if (number == 0) {
