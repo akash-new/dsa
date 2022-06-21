@@ -32,4 +32,23 @@ class Solution {
 			end--;
 		}
 	}
+	
+	/* Using O(n) space code
+	int k = 3;
+		int n = arr.length;
+		int [] tempArr = new int[k];
+	
+		
+		for(int i=k-1,j=0; i<n;i++,j++) {
+			tempArr[j] = arr[i];
+		}
+
+		for(int i=k, j=0;i<n;i++,j++) {
+			arr[i] = arr[j];
+		}
+		
+		for(int i=0;i<k;i++) {
+			arr[i] = tempArr[i];
+		}
+	*/
 }
