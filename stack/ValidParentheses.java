@@ -3,7 +3,12 @@
 class Solution {
     public boolean isValid(String s) {
         
-		ArrayDeque<Character> stack = new ArrayDeque<Character>();
+	
+	//If length of the string is odd it is obviously not valid
+        if (s.length()%2 != 0) 
+            return false;
+	    
+	ArrayDeque<Character> stack = new ArrayDeque<Character>();
         
         for(int i=0;i<s.length();i++) {
             char c = s.charAt(i);
@@ -43,3 +48,28 @@ class Solution {
         return false;
     }
 }
+
+
+
+/*
+Much better cleaner code
+
+	public boolean isValid(String s) {
+		if (s.length()%2 != 0) return false;
+		Stack<Character> stack = new Stack<>();
+
+		for(int i=0; i<s.length(); i++){
+		    char temp = s.charAt(i);
+		    if(temp== '(' || temp=='{' || temp=='[') stack.push(temp);
+		    else{
+			if(stack.isEmpty()) return false;
+			char t = stack.peek();
+			if((t=='(' && temp!=')') || (t=='{' && temp!='}') || (t=='[' && temp!=']')) 
+			    return false;
+			else stack.pop();
+		    }
+
+		}
+		return stack.isEmpty();
+	    }
+*/
