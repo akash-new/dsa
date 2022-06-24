@@ -73,3 +73,18 @@ Much better cleaner code
 		return stack.isEmpty();
 	    }
 */
+//	Solution without stack
+/*	int len = Integer.MAX_VALUE;;
+        while(len>x.length())
+        {
+            len = x.length();
+            x=x.replace("()","");
+            x=x.replace("{}","");
+            x=x.replace("[]","");
+        }
+        if(x.length()>0) {
+          return false;
+        } else {
+          return true;
+        }
+*/
